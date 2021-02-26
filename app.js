@@ -28,12 +28,12 @@ async function start() {
   
     if (serverJ) {
       const path = "./result.txt";
-      var title = "";
+      let content ="";
       if (fs.existsSync(path)) {
-        let content = fs.readFileSync(path, "utf8");
-        var contentSplit = content.split('\n');
-        title = contentSplit[contentSplit.length - 5];
+        content = fs.readFileSync(path, "utf8");
       }
+      var contentSplit = content.split('\n');
+      var title = contentSplit[contentSplit.length - 5];
       await sendNotify(` ${title} ` + new Date().toLocaleDateString(), content);
       console.log('发送通知');
     }else {
