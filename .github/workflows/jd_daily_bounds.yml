@@ -24,4 +24,4 @@ jobs:
             - run: node app.js
               env:
                   JD_COOKIE: ${{ secrets.JD_COOKIE }}
-                  JD_COOKIE: ${{ secrets.SERVER_J_TOKEN }}
+                  SERVER_J_TOKEN: ${{ secrets.SERVER_J_TOKEN }}
